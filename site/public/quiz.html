@@ -37,42 +37,55 @@
                     <a href="./login.html">Login</a>
                 </li>
                 <li>
-                    <a href="./login.html">Cadastro</a>
+                    <a href="./cadastro.html">Cadastro</a>
                 </li>
             </ul>
         </div>
     </div>
 
 
-    <!-- quiz inicio -->
-    <div class="quiz">
-        <div class="container">
-            <h2>Chapeu Seletor</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
+    <div class="banner_quiz">
+        <div class="quiz">
+            <div class="container">
+                <div class="card_quiz">
+                    <div class="seletor">
+                        <h2> Bem-vindo ao Chapeu seletor acomode-se</h2>
+                        <h3> Selecione as características que mais se encaixam com você</h3>
 
+                        <span class="tipo_campo">Primeira característica</span>
+                        <select id="sel_carac1">
+                            <option value="0">Selcione</option>
+                            <option value="1">Coragem</option><!--FORTE-->
+                            <option value="2">Competitivo</option><!--FORTE-->
+                            <option value="3">Lealdade</option><!--FORTE-->
+                            <option value="4">Criativo</option><!--FORTE-->
+                        </select>
+
+                        <span class="tipo_campo">Segunda característica</span>
+                        <select id="sel_carac2">
+                            <option value="0">Selcione</option>
+                            <option value="1">Justo</option><!--FRACO-->
+                            <option value="2">Perfeccionismo</option>
+                            <option value="3">Ingênuidade</option>
+                            <option value="4">Organizado</option><!--FRACO-->
+                        </select>
+
+                        <span class="tipo_campo">Terceira característica</span>
+                        <select id="sel_carac3">
+                            <option value="0">Selcione</option>
+                            <option value="1">Resiliente</option>
+                            <option value="2">Ambição</option><!--FRACO-->
+                            <option value="3">Honesto</option><!--FRACO-->
+                            <option value="4">Sábio</option><!--FRACO-->
+                        </select>
+                        <button class="btn" onclick="finalizar()">Finalizar</button>
+
+                        <div id="div_resposta"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- quiz fim -->
-
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
@@ -82,7 +95,70 @@
     </div>
     <!--footer fim-->
 
-
 </body>
 
 </html>
+<script>
+    function finalizar() {
+        div_resposta.innerHTML = ``
+        var select1 = sel_carac1.value
+        var select2 = sel_carac2.value
+        var select3 = sel_carac3.value
+
+        if (select1 != 0 && select2 != 0 && select3 != 0) {
+            if (select1 == 1 && select3 == 1 && select3 == 1) {
+                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
+            }
+            if (select1 == 2 && select2 == 2 && select3 ==2) {
+                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
+            }
+            if (select1 == 3 && select2 == 3 && select3 == 3) {
+                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
+            }
+            if (select1 == 4 && select2 == 4 && select3 == 4) {
+                div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
+            }
+
+            // começo dos alternados
+            if (select1 == 1 && (select2== 1 || select3 == 1)) {
+                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
+            }
+            if (select1 == 2 && (select2== 2 || select3 == 2)) {
+                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
+            }
+            if (select1 == 3 && (select2== 3 || select3 == 3)) {
+                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
+            }
+            if (select1 == 4 && (select2== 4 || select3 == 4)) {
+                div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
+            }
+
+             // começo das segundas alternados
+             if (select2 == 1 && (select1== 1 || select3 == 1)) {
+                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
+            }
+            if (select3 == 2 && (select1== 2 || select2 == 2)) {
+                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
+            }
+            if (select3 == 3 && (select1== 3 || select2 == 3)) {
+                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
+            }
+            if (select2 == 4 && (select1== 4 || select3 == 4)) {
+                div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
+            }
+
+            // começo das terceiras alternados
+            
+            
+           
+            
+            
+
+            
+           
+        } else {
+            alert`Selecione todos os campos por favor`
+        }
+    }
+
+</script>
