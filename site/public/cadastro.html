@@ -25,7 +25,7 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <h1 class="titulo">Harry Potter</h1>
+            <img src="assets/imgs/harry_potter_logo.png" class="logo">
             <ul class="navbar">
                 <li>
                     <a href="./index.html">Inicial</a>
@@ -47,7 +47,7 @@
     <!--header fim-->
 
 
-    <div class="banner ">
+    <div class="banner_cadastro">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
@@ -55,7 +55,7 @@
         </div>
         <div class="container tamanho-conteudo">
             <div class="card medio">
-                <h2>Bem-vindo!</h2>
+                <h2>Bem-vindo PotterHead</h2>
                 <div class="formulario">
 
                     <!--
@@ -67,13 +67,20 @@
                     <input id="nome_input" type="text" placeholder="Seu nome">
 
                     <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                    <input id="email_input" type="text" placeholder="exemplo@gmail.com">
 
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
 
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
+                    <span class="tipo_campo">Selecione sua casa favorita:</span>
+                    
+                    <select class="sel_casa">
+                        <option value="0">Selecione</option>
+                        <option value="1">Grifinória</option>
+                        <option value="2">Sonserina</option>
+                        <option value="3">Corvinal</option>
+                        <option value="4">Lufa-lufa</option>
+                    </select>
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
@@ -92,7 +99,8 @@
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por um aluno &hearts;SPTech &copy; 2022</h4>
+            <img src="assets/imgs/logo_footer.webp" class="img_footer">
+            <h4>Feito por um fã de Harry Potter do primeiro semestre de SIS 2022</h4>
         </div>
     </div>
     <!--footer fim-->

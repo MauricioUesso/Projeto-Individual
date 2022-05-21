@@ -101,6 +101,8 @@ body {
   box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
   margin: auto;
   margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* Carrosel */
@@ -133,6 +135,7 @@ body {
     width: 180px;
     margin-top: 5px;
     border: solid 3px #ffffff;
+    border-radius: 10px;
 }
 
 .carrosel .container .boxes {
@@ -155,6 +158,7 @@ body {
   font-size: 20px;
   background-color:#000000;
   color: white;
+  border-radius: 10px;
 }
 
 
@@ -185,6 +189,10 @@ body {
   justify-content: center;
 }
 
+.img_footer {
+  width: 60px;
+}
+
 
 /* LOGIN */
 
@@ -206,6 +214,8 @@ body {
 
 .card h2 {
   font-size: 30px;
+  padding: 25px;
+  text-align: center;
 }
 
 .card h4 {
@@ -252,14 +262,20 @@ button {
 .formulario {
   display: flex;
   flex-direction: column;
+  width: 250px;
 }
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 2px solid #d7ad09;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
+  background-color: #f4e092;
+}
+
+.sel_casa {
+  background-color: #f4e092;
 }
 
 .btn {
@@ -270,8 +286,24 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #d7ad09;
   width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.btn:hover {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #d7ad09;
+  width: 140px;
+  height: 50px;
+  transition: 2s;
   align-self: center;
   margin-top: 5px;
 }
@@ -388,12 +420,105 @@ input {
   cursor: pointer;
 }
 
-/* pagina extra - simulador */
-.simulador {
+/* pagina extra - quiz */
+.quiz {
   color: white;
 
 }
 
-.simulador .container {
-  flex-direction: column
+.quiz .container {
+  flex-direction: column;
+  margin-bottom: 300px;
+}
+
+/* pagina extra - curiosidades */
+.curiosidades {
+  color: white;
+
+}
+
+.curiosidades .container {
+  flex-direction: column;
+  margin-bottom: 300px;
+}
+
+.curiosidade1  {
+  border-radius: 10px;
+  border: solid 1px #d7ad09;;
+  margin: 15px;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+}
+
+.curiosidade2  {
+  border-radius: 10px;
+  border: solid 1px #d7ad09;;
+  margin: 15px;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+}
+
+.curiosidade3  {
+  border-radius: 10px;
+  border: solid 1px #d7ad09;;
+  margin: 15px;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+}
+
+.curiosidade4  {
+  border-radius: 10px;
+  border: solid 1px #d7ad09;;
+  margin: 15px;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+}
+
+/* pagina de cadastro */
+
+.banner_cadastro {
+  height: 650px;
+  padding: 100px 0;
+  color: white;
+  background-image: url(".././assets/imgs/banner_cadastro.webp");
+  background-size: cover;
+}
+
+.banner_cadastro .container .card {
+  background-color: #000000;
+  height: 470px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: #d7ad09;
+  align-items: center;
+  border-radius: 10px;
+  margin: auto;
+  border: solid 3px #d7ad09;;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card h4 {
+  font-size: 16px;
+}
+
+.banner_cadastro #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
 }
