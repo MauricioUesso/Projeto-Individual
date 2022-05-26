@@ -428,7 +428,6 @@ input {
 /* pagina extra - quiz */
 .quiz {
   height: 650px;
-  padding: 100px 0;
   color: white;
   background-image: url(".././assets/imgs/harry_banner.jpg");
   background-size: cover;
@@ -505,8 +504,7 @@ input {
 }
 
 .banner_curiosidades {
-  height: 650px;
-  padding: 100px 0;
+  height: 800px;
   color: white;
   background-image: url(".././assets/imgs/harry_banner.jpg");
   background-size: cover;
@@ -520,7 +518,6 @@ input {
 .curiosidade1 {
   border-radius: 10px;
   border: solid 1px #d7ad09;
-  ;
   margin: 15px;
   font-size: 20px;
   padding: 20px;
