@@ -2,24 +2,20 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+create database ProjetoIndividual;
+use ProjetoIndividual;
 
-USE acquatec;
-
-CREATE TABLE usuario (
+create table usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50), 
+    combo VARCHAR(50)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+select * from usuario;
+select id, combo from usuario;
+
 
 create table aquario (
 /* em nossa regra de negócio, um aquario tem apenas um sensor */
