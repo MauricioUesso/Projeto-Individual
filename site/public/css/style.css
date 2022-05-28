@@ -439,15 +439,67 @@ input {
 }
 
 .card_quiz {
-  width: 600px;
-  height: 500px;
+  height: 100%;
   margin: auto;
   padding: 50px;
+  display: flex;
+}
+
+.card_perso {
+  background-color: #000000;
+  width: 50%;
+  height: 500px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+  border: solid 3px #d7ad09;
+  color: #d7ad09;
+
+}
+
+#div_sorteio {
+  font-size: 20px;
+}
+
+.btn_sorteio {
+  width: 130px;
+  height: 55px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  background-color: #d7ad09;
+
+}
+
+.btn_sorteio:hover {
+  width: 150px;
+  height: 60px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 10px;
+  color: white;
+  background-color: #d7ad09;
+  transition: 0.5s;
+
+}
+
+#img_sorteio {
+  margin-top: 10px;
+  width: 250px;
+  height: 300px;
+  box-shadow: inset 0 0 1em #d7ad09, 0 0 1em rgb(0, 0, 0);
+  border: solid 3px #d7ad09;
+
 }
 
 .seletor {
   background-color: #000000;
-  width: 550px;
+  width: 50%;
   height: 500px;
   margin: auto;
   align-items: center;

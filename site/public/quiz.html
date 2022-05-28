@@ -76,11 +76,17 @@
                             <option value="1">Resiliente</option>
                             <option value="2">Ambição</option><!--FRACO-->
                             <option value="3">Honesto</option><!--FRACO-->
-                            <option value="4">Sábio</option><!--FRACO-->
+                            <option value="4">Sábio</option>
                         </select>
                         <button class="btn" onclick="finalizar()">Finalizar</button>
 
                         <div id="div_resposta"></div>
+                    </div>
+                    <div class="card_perso">
+                        <h2>Qual personagem você é?</h2>
+                        <button class="btn_sorteio" onclick="sortear()">Sortear personagem</button>
+                        <div id="div_sorteio"></div>
+                        <img src="" id="img_sorteio" style="display: none;">
                     </div>
                 </div>
             </div>
@@ -106,58 +112,140 @@
         var select3 = sel_carac3.value
 
         if (select1 != 0 && select2 != 0 && select3 != 0) {
-            if (select1 == 1 && select3 == 1 && select3 == 1) {
+           
+
+            // começo das alternados - Grifinória
+            if (select1 == 1 && select2 == 1 && select3 == 1) {
                 div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
             }
-            if (select1 == 2 && select2 == 2 && select3 ==2) {
+            if (select1 == 1 && (select2 == 1 || select3 == 1)) {
+                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
+            }
+            if (select2 == 1 && (select1 == 1 || select3 == 1)) {
+                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
+            }
+            
+            
+
+             // começo das alternados - Sonserina
+             if (select1 == 2 && select2 == 2 && select3 ==2) {
                 div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
             }
+            if (select1 == 2 && (select2 == 2 || select3 ==2)) {
+                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
+            }
+            if (select3 == 2 && (select1 == 2 || select2 ==2)) {
+                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
+            }
+            
+
+            // começo das alternados - Lufa-Lufa
             if (select1 == 3 && select2 == 3 && select3 == 3) {
                 div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
             }
+            if (select1 == 3 && (select2 == 3 || select3 == 3)) {
+                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
+            }
+            if (select3 == 3 && (select2 == 3 && select3 == 3)) {
+                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
+            }
+           
+
+            // começo das alternados - Corvinal
             if (select1 == 4 && select2 == 4 && select3 == 4) {
                 div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
             }
-
-            // começo dos alternados
-            if (select1 == 1 && (select2== 1 || select3 == 1)) {
-                div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
-            }
-            if (select1 == 2 && (select2== 2 || select3 == 2)) {
-                div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
-            }
-            if (select1 == 3 && (select2== 3 || select3 == 3)) {
-                div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
-            }
-            if (select1 == 4 && (select2== 4 || select3 == 4)) {
+            if (select1 == 4 && (select2 == 4 && select3 == 4)) {
+                div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
+            }           
+            if (select2 == 4 && (select1 == 4 || select3 == 4)) {
                 div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
             }
+            
+            // começo dos randomizados
 
-             // começo das segundas alternados
-             if (select2 == 1 && (select1== 1 || select3 == 1)) {
+            if (select3 == 1 && (select1 == 1 || select2 == 1)) {
                 div_resposta.innerHTML = `<b style="color: #ae0b0f; font-size: 40px;">Grifinória</b>`
             }
-            if (select3 == 2 && (select1== 2 || select2 == 2)) {
+            if (select2 == 2 && (select1 == 2 || select3 == 2)) {
                 div_resposta.innerHTML = `<b style="color: #146a0a; font-size: 40px;">Sonserina</b>`
             }
-            if (select3 == 3 && (select1== 3 || select2 == 3)) {
+            if (select2 == 3 && (select1 == 3 || select3 == 3)) {
                 div_resposta.innerHTML = `<b style="color: #dcb606; font-size: 40px;">Lufa-Lufa</b>`
             }
-            if (select2 == 4 && (select1== 4 || select3 == 4)) {
+            if (select3 == 4 && (select1 == 4 || select2 == 4)) {
                 div_resposta.innerHTML = `<b style="color: #095a8f; font-size: 40px;">Corvinal</b>`
             }
+            
 
-            // começo das terceiras alternados
-            
-            
-           
             
             
 
             
-           
+
+
+
+
+
+
         } else {
             alert`Selecione todos os campos por favor`
+        }
+    }
+
+    function sortear() {
+        var sorteado = parseInt(Math.random() * 8) + 1
+        div_sorteio.innerHTML = ``
+        img_sorteio.src = ""
+        
+
+        if(sorteado == 1) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Harry Potter</b>`
+        img_sorteio.src = "assets/imgs/sorteio_harry.jpg"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 2) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Hermione Granger</b>`
+        img_sorteio.src = "assets/imgs/sorteio_hermione.png"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 3) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Draco Malfoy</b>`
+        img_sorteio.src = "assets/imgs/sorteio_draco.jpg"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 4) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ronald Weasley</b>`
+        img_sorteio.src = "assets/imgs/sorteio_rony.jpg"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 5) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Dobby</b>`
+        img_sorteio.src = "assets/imgs/sorteio_dobby.jpg"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 6) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ginevra Weasley</b>`
+        img_sorteio.src = "assets/imgs/sorteio_gina.png"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 7) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Lord Voldemort</b>`
+        img_sorteio.src = "assets/imgs/sorteio_lord.png"
+        img_sorteio.style.display = `block`
+
+        }
+        if(sorteado == 8) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Luna Lovegood</b>`
+        img_sorteio.src = "assets/imgs/sorteio_luna.jpg"
+        img_sorteio.style.display = `block`
+
         }
     }
 
