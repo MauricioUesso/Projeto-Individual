@@ -1,2 +1,3 @@
-# API Projeto Site - 1º Semestre
-Esta API será utilizada para conectar seu Website do Projeto de PI ao Banco de Dados.
+Projeto Individual
+Projeto para desenvolver os conhecimentos que foram apresentados do decorrer do semestre
+
