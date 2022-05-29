@@ -106,7 +106,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #000000;
 }
 
 .dash {
@@ -114,7 +114,9 @@ body {
   position: relative;
   top: 0;
   left: 25%;
-  background-color: #161618;
+  background-color: #000000;
+  background-image: url(".././assets/imgs/fundo_dash.png");
+  background-size: cover;
 
   /* width: 75%;
     display: flex;
@@ -183,6 +185,7 @@ body {
   font-size: 20px;
 }
 
+
 .card p {
   margin: 0;
   font-size: 50px;
@@ -239,8 +242,8 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
+  color: #ffffff;
+  background-color: #d7ad09;
   margin: 5px;
-  border-radius: 3px;
+  border-radius: 5px;
 }

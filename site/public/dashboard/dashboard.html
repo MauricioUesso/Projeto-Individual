@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Dashboards</title>
+    <title>Harry Potter | Dashboards</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
@@ -26,30 +26,13 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AcquaTec</h1>
+            <h1>Harry Potter</h1>
 
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Bem vindo <span id="b_usuario">usuário</span>!
+                <br> Aqui você irá ter acesso a nossa pesquisa, que provavelmente você respondeu logo quando se 
+            cadastrou no nosso site</h3>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
             <div class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
@@ -59,10 +42,8 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
+                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Gráfico das casas</button>
+                
             </div>
             <div>
                 <h3 class="tituloGraficos">
@@ -92,7 +73,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "Porcentagem de pessoas que preferem determinadas casas"
     }
 
     // O gráfico é construído com três funções:
