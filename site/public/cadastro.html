@@ -74,12 +74,12 @@
 
                     <span class="tipo_campo">Selecione sua casa favorita:</span>
                     
-                    <select id="combo">
+                    <select id="fkCasa">
                         <option value="0">Selecione</option>
-                        <option value="Grifinória">Grifinória</option>
-                        <option value="Sonserina">Sonserina</option>
-                        <option value="Corvinal">Corvinal</option>
-                        <option value="Lufa-lufa">Lufa-lufa</option>
+                        <option value="1">Grifinória</option>
+                        <option value="2">Sonserina</option>
+                        <option value="3">Lufa-Lufa</option>
+                        <option value="4">Corvinal</option>
                     </select>
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
@@ -119,9 +119,9 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
-        var comboVar = combo.value;
+        var fkCasaVar = fkCasa.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || comboVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || fkCasaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -144,7 +144,7 @@
                 nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar,
-                comboServer: comboVar
+                fkCasaServer: fkCasaVar
             })
         }).then(function (resposta) {
 

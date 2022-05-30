@@ -1,18 +1,21 @@
 create database ProjetoIndividual;
 use ProjetoIndividual;
-CREATE TABLE usuario (
+
+create table casa (
+idCasa int primary key auto_increment,
+nomeCasa varchar (15), 
+descricao varchar (45)
+);
+
+create table usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50), 
-    combo VARCHAR (20)
+    fkCasa int, foreign key (fkCasa) references casa (idCasa)
 );
-select * from usuario;
 
-CREATE TABLE votacao (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+insert into casa (nomeCasa, descricao) values ('Grifinória', 'Casa vermelha'),
+                                              ('Sonserina', 'Casa verde'),
+                                              ('Lufa-Lufa', 'Casa amarela'),
+                                              ('Corvinal', 'Casa azul');

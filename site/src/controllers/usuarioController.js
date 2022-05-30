@@ -65,7 +65,7 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    var combo = req.body.comboServer;
+    var fkCasa = req.body.fkCasaServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -74,13 +74,13 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else if (combo == undefined) {
+    } else if (fkCasa == undefined) {
         res.status(400).send("Sua combo está undefined!");
     } else {
         
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, combo)
+        usuarioModel.cadastrar(nome, email, senha, fkCasa)
             .then(
                 function (resultado) {
                     res.json(resultado);
