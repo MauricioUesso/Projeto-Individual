@@ -105,6 +105,7 @@
         <div class="container">
             <img src="assets/imgs/logo_footer.webp" class="img_footer">
             <h4>Feito por um fã de Harry Potter do primeiro semestre de SIS 2022</h4>
+            <a href="https://github.com/MauricioUesso"><img src="assets/imgs/github_footer.png" class="git"></a>
         </div>
     </div>
     <!--footer fim-->
@@ -317,58 +318,61 @@
             alert`Selecione todos os campos por favor`
         }
     }
+    var imagens = ["assets/imgs/sorteio_harry.jpg", "assets/imgs/sorteio_hermione.png", "assets/imgs/sorteio_draco.jpg",
+    "assets/imgs/sorteio_rony.jpg", "assets/imgs/sorteio_dobby.jpg", "assets/imgs/sorteio_gina.png", "assets/imgs/sorteio_lord.png",
+    "assets/imgs/sorteio_luna.jpg"]
 
     function sortear() {
-        var sorteado = parseInt(Math.random() * 8) + 1
+        var sorteado = parseInt(Math.random() * 7) 
         div_sorteio.innerHTML = ``
         img_sorteio.src = ""
 
 
-        if (sorteado == 1) {
+        if (sorteado == 0) {
             div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Harry Potter</b>`
-            img_sorteio.src = "assets/imgs/sorteio_harry.jpg"
+            img_sorteio.src = imagens[sorteado]
+            img_sorteio.style.display = `block`
+
+        }
+        if (sorteado == 1) {
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Hermione Granger</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 2) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Hermione Granger</b>`
-            img_sorteio.src = "assets/imgs/sorteio_hermione.png"
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Draco Malfoy</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 3) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Draco Malfoy</b>`
-            img_sorteio.src = "assets/imgs/sorteio_draco.jpg"
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ronald Weasley</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 4) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ronald Weasley</b>`
-            img_sorteio.src = "assets/imgs/sorteio_rony.jpg"
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Dobby</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 5) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Dobby</b>`
-            img_sorteio.src = "assets/imgs/sorteio_dobby.jpg"
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ginevra Weasley</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 6) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Ginevra Weasley</b>`
-            img_sorteio.src = "assets/imgs/sorteio_gina.png"
+            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Lord Voldemort</b>`
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
         if (sorteado == 7) {
-            div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Lord Voldemort</b>`
-            img_sorteio.src = "assets/imgs/sorteio_lord.png"
-            img_sorteio.style.display = `block`
-
-        }
-        if (sorteado == 8) {
             div_sorteio.innerHTML = `<b style="color: #dcb606; font-size: 30px;">Luna Lovegood</b>`
-            img_sorteio.src = "assets/imgs/sorteio_luna.jpg"
+            img_sorteio.src = imagens[sorteado]
             img_sorteio.style.display = `block`
 
         }
