@@ -25,7 +25,9 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <img src="assets/imgs/harry_potter_logo.png" class="logo" >
+            <li>
+                <a href="./index.html"><img src="assets/imgs/harry_potter_logo.png" class="logo"></a>
+            </li>
             <ul class="navbar">
                 <li>
                     <a href="./index.html">Inicial</a>
@@ -71,6 +73,10 @@
 
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
+                    <div class="checkbox" id="checkbox1">
+                        <img class="password_image" id="password_image1" src="assets/imgs/hidePassword.png"
+                            style="height: 10px;" onclick="mostrarSenha1()">
+                    </div>
 
                     <span class="tipo_campo">Selecione sua casa favorita:</span>
                     
@@ -112,6 +118,15 @@
 </html>
 
 <script>
+    function mostrarSenha1() {
+        if (senha_input.type == "password") {
+            password_image1.src = "assets/imgs/hidePassword.png"
+            senha_input.type = "text"
+        } else {
+            password_image1.src = "assets/imgs/showPassword.png"
+            senha_input.type = "password"
+        }
+    }
     function cadastrar() {
         aguardar();
 
