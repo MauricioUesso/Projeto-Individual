@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harry Potter | Quiz</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="./assets/imgs/logo_footer.webp">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--header inicio-->
+    <div class="header">
+        <div class="container">
+            <li>
+                <a href="./index.html"><img src="assets/imgs/harry_potter_logo.png" class="logo"></a>
+            </li>
+            <ul class="navbar">
+                <li>
+                    <a href="./index.html">Inicial</a>
+                </li>
+                <a href="quiz.html">Quiz</a>
+                <li>
+                    <a href="curiosidades.html">Curiosidades</a>
+                </li>
+                <li>
+                <li class="agora">Simulador</li>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./login.html">Login</a>
+                </li>
+                <li>
+                    <a href="./cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="banner_quiz">
+        <div class="quiz">
+            <div class="container">
+                <div class="card_simulador">
+                    <div class="simulador">
+                        <h2>Calaculadora para medir o quanto tempo você <br>
+                            ja passou assistindo Harry Potter</h2>
+                        Informe quantas vezes você ja assistiu Harry Potter:
+                        <br>
+                        (Pode ser repetidas vezes)
+
+                        <input type="number" class="tipo_campo" placeholder="Quantida de vezes" id="i_quantidade">
+                        <button class="btn" onclick="medir()">Medir</button>
+                        <div id="div_simulador"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer inicio-->
+        <div class="footer">
+            <div class="container">
+                <img src="assets/imgs/logo_footer.webp" class="img_footer">
+                <h4>Feito por um fã de Harry Potter do primeiro semestre de SIS 2022</h4>
+                <a href="https://github.com/MauricioUesso"><img src="assets/imgs/github_footer.png" class="git"></a>
+            </div>
+        </div>
+        <!--footer fim-->
+
+</body>
+
+</html>
+<script>
+    function medir() {
+        var quantidade = Number(i_quantidade.value)
+        var calculo = quantidade * 150
+        var horas = calculo / 60
+        div_simulador.innerHTML = ``
+        var classe = ``
+
+        if (quantidade < 0) {
+            alert`Como assim você assistiu menos de 0 vezes?`
+        }
+        else if (quantidade == 0) {
+            div_simulador.innerHTML = `O que você está esperando para começar assistir?`
+        }
+        else if (quantidade > 0 && quantidade < 5) {
+            classe = 'Possivel interessado na frânquia'
+            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+             <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
+        }
+        else if (quantidade >= 5 && quantidade < 17) {
+            classe = 'Interessado na frânquia'
+            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+            <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
+        }
+        else if (quantidade >= 17 && quantidade < 24) {
+            classe = 'Fã da frânquia'
+            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+            <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
+        }
+        else if (quantidade >= 24 && quantidade < 32) {
+            classe = 'Grande fã da frânquia'
+            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+            <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
+        }
+        else if (quantidade >= 32) {
+            classe = 'PotterHead'
+            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+            <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
+        }
+
+    }
+
+
+</script>
