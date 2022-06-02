@@ -14,7 +14,8 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                     where fk_aquario = ${idAquario}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select usuario.fkCasa, count(usuario.id) as quantidade from usuario join casa on usuario.fkCasa = casa.idCasa group by casa.nomeCasa;
+        instrucaoSql = `select casa.nomeCasa, count(usuario.id) as quantidade from usuario join casa on usuario.fkCasa = casa.idCasa group by casa.nomeCasa;
+
         `;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");

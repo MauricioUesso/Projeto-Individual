@@ -225,9 +225,13 @@ body {
 }
 
 .graph {
-  width: 50%;
+  width: 65%;
   margin: auto;
   padding-top: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(54, 53, 53, 0.8));
+  color: #ffffff;
+  border-radius: 10px;
+
 }
 
 .tituloGraficos {

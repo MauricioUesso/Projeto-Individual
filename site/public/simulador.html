@@ -90,45 +90,36 @@
 
         if (quantidade < 0) {
             alert`Como assim você assistiu menos de 0 vezes?`
+            return 0
         }
         else if (quantidade == 0) {
             div_simulador.innerHTML = `O que você está esperando para começar assistir?`
+            return 0
         }
         else if (quantidade > 0 && quantidade < 5) {
             classe = 'Possivel interessado na frânquia'
-            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
-            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
-             <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+           
         }
         else if (quantidade >= 5 && quantidade < 17) {
             classe = 'Interessado na frânquia'
-            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
-            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
-            <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+           
         }
         else if (quantidade >= 17 && quantidade < 24) {
             classe = 'Fã da frânquia'
-            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
-            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
-            <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+           
         }
         else if (quantidade >= 24 && quantidade < 32) {
             classe = 'Grande fã da frânquia'
-            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
-            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
-            <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+          
         }
         else if (quantidade >= 32) {
             classe = 'PotterHead'
-            div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
-            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
-            <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+            
         }
+        div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
+            Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
+             <b>Você pode ser considerado um:</b>
+              <br> ${classe}`
 
     }
 

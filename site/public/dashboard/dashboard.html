@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- scripts do Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
 
@@ -128,9 +128,9 @@
         },
         {
           yAxisID: 'y-quantidade',
-          label: 'quantidade',
-          borderColor: '#FFC857',
-          backgroundColor: '#FFC857',
+          label: 'Quantidade',
+          borderColor: '#ffffff',
+          backgroundColor: ['#40120f','#012c07','#aa8e08','#011f3b',],
           fill: true,
           data: []
         }
@@ -139,7 +139,7 @@
 
     for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
-      dados.labels.push(registro.nome);
+      dados.labels.push(registro.nomeCasa);
       dados.datasets[1].data.push(registro.quantidade);
     }
 
@@ -184,7 +184,7 @@
       }
     });
 
-    setTimeout(() => atualizarGrafico(casa, dados), 2000);
+    
   }
 
 
