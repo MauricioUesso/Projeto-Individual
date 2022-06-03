@@ -225,7 +225,7 @@ body {
 }
 
 .graph {
-  width: 65%;
+  width: 80%;
   margin: auto;
   padding-top: 10px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(54, 53, 53, 0.8));
@@ -238,6 +238,10 @@ body {
   color: rgb(216, 216, 216);
   display: flex;
   justify-content: center;
+}
+
+.img_dash {
+  width: 200px;
 }
 
 .btn-chart {

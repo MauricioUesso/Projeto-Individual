@@ -26,7 +26,9 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>Harry Potter</h1>
+          <h1 class="titulo"><a href="../index.html">
+          <img src="../assets/imgs/harry_potter_logo.png" class="img_dash">
+        </a></h1>
 
             <div class="hello">
                 <h3>Bem vindo <span id="b_usuario">usuário</span>!
@@ -121,7 +123,7 @@
       {
           yAxisID: 'y-quantidade',
           label: 'Quantidade',
-          borderColor: '#ffffff',
+          borderColor: '#000000',
           backgroundColor: ['#40120f','#012c07','#aa8e08','#011f3b',],
           fill: true,
           data: []
@@ -146,7 +148,7 @@
     console.log(JSON.stringify(dados));
 
     var ctx = canvas_grafico.getContext('2d');
-    window.grafico_barra = Chart.Bar(ctx, {
+    window.grafico_barra = Chart.Doughnut(ctx, {
       data: dados,
       options: {
         responsive: true,
