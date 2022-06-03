@@ -118,15 +118,7 @@
     var dados = {
       labels: [],
       datasets: [
-        {
-          yAxisID: '',
-          label: '',
-          borderColor: '',
-          backgroundColor: '',
-          fill: true,
-          data: []
-        },
-        {
+      {
           yAxisID: 'y-quantidade',
           label: 'Quantidade',
           borderColor: '#ffffff',
@@ -134,13 +126,21 @@
           fill: true,
           data: []
         }
+        // {
+        //   yAxisID: 'y-quantidade',
+        //   label: 'Quantidade',
+        //   borderColor: '#ffffff',
+        //   backgroundColor: ['#40120f','#012c07','#aa8e08','#011f3b',],
+        //   fill: true,
+        //   data: []
+        // }
       ]
     };
 
     for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
       dados.labels.push(registro.nomeCasa);
-      dados.datasets[1].data.push(registro.quantidade);
+      dados.datasets[0].data.push(registro.quantidade);
     }
 
     console.log(JSON.stringify(dados));
@@ -209,7 +209,7 @@
           // dados.labels.shift(); // apagar o primeiro
           // dados.labels.push(novoRegistro[0].nome); // incluir um novo momento
           dados.labels = [];
-          dados.datasets[1].data = [];
+          dados.datasets[0].data = [];
 
 
           for (i = 0; i < novoRegistro.length; i++) {
