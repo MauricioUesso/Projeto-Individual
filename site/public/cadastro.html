@@ -142,7 +142,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || fkCasaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Certifique-se de preencher todos os campos";
 
             finalizarAguardar();
             return false;
@@ -172,7 +172,7 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Se apresse o expresso Hogwarts já está saindo";
 
                 setTimeout(() => {
                     window.location = "login.html";
