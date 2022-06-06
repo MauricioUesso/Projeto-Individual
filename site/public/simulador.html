@@ -119,7 +119,14 @@
         div_simulador.innerHTML = `Levando em conta que cada filme tem em média 2h30min e você já assistiu ${quantidade} vezes,
             Você ja passou cerca ${calculo} minutos assistindo Harry Potter o que equivale a ${horas} horas.<br>
              <b>Você pode ser considerado um:</b>
-              <br> ${classe}`
+              <br> ${classe}<br><br>
+              Cada estrela dessa representa as vezes que você parou para assistir Harry Potter<br>`
+              
+              for (imagem = 1; imagem <= quantidade; imagem++){
+             div_simulador.innerHTML += `<img src = "https://imagepng.org/wp-content/uploads/2017/10/estrela-480x432.png"width = "20px">`
+             
+            }
+      
 
     }
 
